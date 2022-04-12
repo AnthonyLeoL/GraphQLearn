@@ -79,10 +79,11 @@ function App() {
         <ul>
           <li>Here's a toggle to help: (variable is called isMarried)</li>
 
-          <>
-            <input type="checkbox" onChange={() => setIsMarried(!isMarried)} />{" "}
+          <li>
+            <input type="checkbox" onChange={() => setIsMarried(!isMarried)} />
             {isMarried ? "Married" : "Single"}
-          </>
+          </li>
+          <li>You'll need to work on client and server!</li>
         </ul>
         <li>Can you add a mutation to create a new user?</li>
       </ul>
