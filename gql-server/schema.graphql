@@ -1,0 +1,13 @@
+type User {
+  name: String! # ! denotes required fields
+  age: Int
+  married: Boolean
+}
+
+type Query {
+  getAllUsers: [User!]!
+}
+
+type Query {
+  hello: String!
+}
