@@ -37,7 +37,12 @@ const startServer = async () => {
     },
     Mutation: {
       createUser(root, args) {
-        const newUser = args;
+        console.log("🚀 ~ file: index.js ~ line 40 ~ createUser ~ arg", args);
+        const newUser = {
+          name: args.name,
+          age: args.age,
+          married: args.married,
+        };
         Users.push(newUser);
         return newUser;
       },
