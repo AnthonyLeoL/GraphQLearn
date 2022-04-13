@@ -35,6 +35,13 @@ const startServer = async () => {
         return "Hello World";
       },
     },
+    Mutation: {
+      createUser(root, args) {
+        const newUser = args;
+        Users.push(newUser);
+        return newUser;
+      },
+    },
   };
 
   const server = new ApolloServer({ typeDefs, resolvers });

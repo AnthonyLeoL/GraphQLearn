@@ -17,6 +17,7 @@ function App() {
   query test($status: Boolean){
     getUsersByStatus(status: $status) {
       name
+      age
       married
     }
   }
