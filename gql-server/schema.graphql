@@ -6,7 +6,6 @@ type User {
 
 type Query {
   getAllUsers: [User!]!
-  # TODO add query for getting users by marriage status
 }
 
 type Query {
