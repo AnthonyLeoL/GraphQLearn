@@ -145,7 +145,8 @@ function App() {
           "married" fields as well?
         </li>
         <li>
-          Can you create a new query that gets users based on marriage status?{" "}
+          Can you create a new query that gets users based on marriage status?
+          <ul>(client and server-side)</ul>
         </li>{" "}
         <ul>
           <li>Here's a toggle to help: (variable is called isMarried)</li>
@@ -158,6 +159,7 @@ function App() {
           </li>
         </ul>
         <li>Can you add a mutation to create a new user?</li>
+        <ul>(client and server-side)</ul>
         <ul>
           <li>
             <input
