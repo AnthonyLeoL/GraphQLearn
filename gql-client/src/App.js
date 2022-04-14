@@ -12,20 +12,22 @@ function App() {
   const URL = "http://localhost:4000/graphql";
 
   const HelloWorld = `query  queryName {hello}`;
-
-  const UserQuery = `
+  //TODO update this query
+  const UserQuery = ` 
     query  queryName{
     getAllUsers {
       name
 
-    }}`;
+    }}`; //goal1
 
+  //TODO finish this query, add query to server
   const getUsersByStatus = `
   query test($status: Boolean){
 
     }
   }
-  `;
+  `; //goal2
+  //TODO finish this mutation, add mutation to server
   const createUser = `
   mutation Mutation($name: String!, $age: Int, $married: Boolean) {
 
