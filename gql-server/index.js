@@ -35,6 +35,7 @@ const startServer = async () => {
         return "Hello World";
       },
     },
+    // TODO(goal3) add resolver for creating a user
   };
 
   const server = new ApolloServer({ typeDefs, resolvers });
