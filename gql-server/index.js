@@ -23,12 +23,7 @@ const startServer = async () => {
         return Users;
       },
       getUsersByStatus(root, args) {
-        console.log(
-          "🚀 ~ file: index.js ~ line 26 ~ getUsersByStatus ~ args",
-          args
-        );
-
-        return Users.filter((user) => user.married === args.status);
+        //TODO implement this code
       },
       hello() {
         console.log("returning hello world");

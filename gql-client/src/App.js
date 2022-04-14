@@ -23,11 +23,7 @@ function App() {
 
   const getUsersByStatus = `
   query test($status: Boolean){
-    getUsersByStatus(status: $status) {
-      name
-      age
-      married
-    }
+
   }
   `;
   const createUser = `
