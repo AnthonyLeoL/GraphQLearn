@@ -12,3 +12,5 @@ type Query {
 type Query {
   hello: String!
 }
+# TODO(goal2) add query for getting users by marriage status
+# TODO(goal3) add mutation for creating a user

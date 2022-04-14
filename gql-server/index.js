@@ -14,6 +14,7 @@ const startServer = async () => {
   // Provide resolver functions for your schema fields
   const resolvers = {
     Query: {
+      //TODO goal(2) add resolver for getting user by marriage status
       getAllUsers() {
         console.log(
           "🚀 ~ file: index.js ~ line 21 ~ getAllUsers ~ data",
@@ -22,14 +23,12 @@ const startServer = async () => {
 
         return Users;
       },
-      getUsersByStatus(root, args) {
-        //TODO implement this code
-      },
       hello() {
         console.log("returning hello world");
         return "Hello World";
       },
     },
+    //TODO (goal 3) add mutation resolver for creating a user
   };
 
   const server = new ApolloServer({ typeDefs, resolvers });
