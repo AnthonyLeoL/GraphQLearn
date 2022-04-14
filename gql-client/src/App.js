@@ -12,8 +12,8 @@ function App() {
   const URL = "http://localhost:4000/graphql";
 
   const HelloWorld = `query  queryName {hello}`;
-
-  const UserQuery = `
+  //TODO (goal1) update this query
+  const UserQuery = ` 
     query  queryName{
     getAllUsers {
       name
@@ -21,11 +21,14 @@ function App() {
       married
     }}`;
 
+  //TODO (goal2) finish this query, add query to server
   const getUsersByStatus = `
   query test($status: Boolean){
 
+    }
   }
   `;
+  //TODO (goal3) finish this mutation, add mutation to server
   const createUser = `
   mutation Mutation($name: String!, $age: Int, $married: Boolean) {
 
@@ -141,7 +144,7 @@ function App() {
           <ul>(client and server-side)</ul>
         </li>{" "}
         <ul>
-          <li>Here's a toggle to help: (variable is called isMarried)</li>
+          <li>Here's a toggle to help: </li>
           <>
             <input type="checkbox" onChange={() => setIsMarried(!isMarried)} />{" "}
             {isMarried ? "Married" : "Single"}
