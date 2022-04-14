@@ -17,6 +17,8 @@ function App() {
     query  queryName{
     getAllUsers {
       name
+      age
+      married
     }}`;
 
   const getUsersByStatus = `
