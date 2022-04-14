@@ -54,8 +54,25 @@ function App() {
         setData(data.data.hello);
       });
   }, []);
-
   const getUsers = async () => {
+    const userData = await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: UserQuery,
+      }),
+    });
+
+    let { data } = await userData.json();
+
+    console.log("🚀 ~ file: App.js ~ line 42 ~ getUsers ~ data", data);
+
+    setUsers(data.getAllUsers);
+  };
+
+  const getUsersByMarried = async () => {
     const userData = await fetch(URL, {
       method: "POST",
       headers: {
@@ -130,11 +147,13 @@ function App() {
         </li>{" "}
         <ul>
           <li>Here's a toggle to help: (variable is called isMarried)</li>
-
           <>
             <input type="checkbox" onChange={() => setIsMarried(!isMarried)} />{" "}
             {isMarried ? "Married" : "Single"}
-          </>
+          </>{" "}
+          <li>
+            <button onClick={getUsersByMarried}>Send Query</button>
+          </li>
         </ul>
         <li>Can you add a mutation to create a new user?</li>
         <ul>
