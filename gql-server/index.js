@@ -28,7 +28,7 @@ const startServer = async () => {
         return "Hello World";
       },
     },
-    //TODO (goal 3) add mutation resolver for creating a user
+    // TODO(goal3) add resolver for creating a user
   };
 
   const server = new ApolloServer({ typeDefs, resolvers });
