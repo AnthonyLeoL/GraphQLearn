@@ -6,9 +6,6 @@ type User {
 
 type Query {
   getAllUsers: [User!]!
-}
-
-type Query {
   hello: String!
 }
 # TODO(goal2) add query for getting users by marriage status
