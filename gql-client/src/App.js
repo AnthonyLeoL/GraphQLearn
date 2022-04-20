@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { HelloWorld, UserQuery, getUsersByStatus, createUser } from "./Queries";
 function App() {
   const [data, setData] = useState("Loading..."); //State hooks, the App component will re-render after calling setData \
   const [users, setUsers] = useState([]); // or setUsers
@@ -10,33 +10,6 @@ function App() {
     married: false,
   });
   const URL = "http://localhost:4000/graphql";
-
-  const HelloWorld = `query  queryName {hello}`;
-  //TODO (goal1) update this query
-  const UserQuery = ` 
-    query  queryName{
-    getAllUsers {
-      name
-      age
-      married
-    }}`;
-
-  //TODO (goal2) finish this query, add query to server
-  const getUsersByStatus = `
-  query test($status: Boolean){
-    getUsersByStatus(status: $status) {
-      name
-      age
-      married
-    }
-  }
-  `;
-  //TODO (goal3) finish this mutation, add mutation to server
-  const createUser = `
-  mutation Mutation($name: String!, $age: Int, $married: Boolean) {
-
-  }
-  `;
 
   useEffect(() => {
     fetch(URL, {
@@ -122,7 +95,7 @@ function App() {
   return (
     <div style={{ margin: "auto", width: "fit-content" }}>
       <div>{data}</div>
-      <button onClick={getUsers}>query backend</button> <div>Users:</div>
+      <div>Users:</div>
       <div>
         {users.map((user) => {
           return (
@@ -136,11 +109,19 @@ function App() {
             </div>
           );
         })}
+        <hr />
       </div>
+
       <ul>
         <li>
           Can you adjust the query (client-side) to return the "age" and
           "married" fields as well?
+          <ul>
+            <li>
+              {" "}
+              <button onClick={getUsers}>query backend</button>{" "}
+            </li>
+          </ul>
         </li>
         <li>
           Can you create a new query that gets users based on marriage status?
@@ -182,8 +163,8 @@ function App() {
             <input
               type="checkbox"
               name="married"
-              value={newUser.marriageStatus}
-              onChange={updateNewUser}
+              value={newUser.married}
+              onChange={() => setNewUser(...{ married: !newUser.married })}
             />{" "}
             is married
           </li>
