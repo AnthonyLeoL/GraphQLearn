@@ -163,7 +163,9 @@ function App() {
               type="checkbox"
               name="married"
               value={newUser.married}
-              onChange={() => setNewUser(...{ married: !newUser.married })}
+              onChange={() =>
+                setNewUser({ ...newUser, married: !newUser.married })
+              }
             />{" "}
             is married
           </li>
