@@ -8,8 +8,7 @@ export const UserQuery = `
   query {
     getAllUsers {
       name
-      age
-      married
+
   }
 }
 `;
