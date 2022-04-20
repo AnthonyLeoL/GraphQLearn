@@ -28,10 +28,6 @@ export const getUsersByStatus = `
 //TODO (goal3) finish this mutation, add mutation to server
 export const createUser = `
   mutation ($name: String!, $age: Int, $married: Boolean) {
-    createUser(name: $name, age: $age, married: $married) {
-      name
-      age
-      married
-    }
+
   }
   `;
